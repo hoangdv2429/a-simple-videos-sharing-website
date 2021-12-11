@@ -1,7 +1,10 @@
 class Video < ApplicationRecord
     has_one_attached :clip
     has_one_attached :thumbnail
-    # has_one_attached :user 
+    # belongs_to :user 
+    # has_many_attached :comment 
+
+
     validates :title, presence: true
     validates :description, presence: true
     validate :correct_image_type
@@ -18,7 +21,7 @@ class Video < ApplicationRecord
     end
 
     def correct_video_type
-        if(clip.attached? && !clip.content_type.in?(%w(clip/mp4)))
+        if(clip.attached? && !clip.content_type.in?(%w(video/mp4)))
             errors.add(:clip, 'must be MP4.')
             elsif clip.attached? ==false
             errors.add(:clip, 'must be attached.')

@@ -24,6 +24,30 @@
   </tbody>
 </table>
 
-<br>
+<% if @videos.count == 0%>
+  <h1> there are no videos belongs to this category :< !!　申し訳ございません</h1>
 
+<% else %>	
+
+	<div class="row">
+
+		<% @videos.each do |video| %>
+
+			<div class="col-md-1">
+				<a href="/videos/<%= video.id %>">
+					<%= image_tag(video.thumbnail, size: "250", data: { title: video.title }) %>
+          <strong><%= video.title %></strong>
+				</a>
+        <br>
+        <td><%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
+        <td><%= video.description %></td>
+			</div>	
+
+		<% end %>
+
+	</div>
+<%end%>
+
+<br>
+ 
 <%= link_to 'New Video', new_video_path %>
