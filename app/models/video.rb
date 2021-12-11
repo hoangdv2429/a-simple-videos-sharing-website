@@ -2,4 +2,26 @@ class Video < ApplicationRecord
     has_one_attached :clip
     has_one_attached :thumbnail
     # has_one_attached :user 
+    validates :title, presence: true
+    validates :description, presence: true
+    validate :correct_image_type
+    validate :correct_video_type
+
+    private 
+
+    def correct_image_type
+        if (thumbnail.attached? && !thumbnail.content_type.in?(%w(image/jpeg image/png)))
+            errors.add(:thumbnail, 'thumbnail must be a JPEG or PNG.')
+        elsif thumbnail.attached? ==false
+            errors.add(:thumbnail, 'must have an thumbnail attached.')
+        end
+    end
+
+    def correct_video_type
+        if(clip.attached? && !clip.content_type.in?(%w(clip/mp4)))
+            errors.add(:clip, 'Video must be a MP4.')
+            elsif clip.attached? ==false
+            errors.add(:clip, 'must have an video attached.')
+        end
+    end
 end
