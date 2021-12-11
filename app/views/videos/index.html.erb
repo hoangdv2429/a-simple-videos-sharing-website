@@ -41,6 +41,7 @@
         <br>
         <td><%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
         <td><%= video.description %></td>
+        <td> view counts: <%= video.impressionist_count %> views<td>
 			</div>	
 
 		<% end %>
