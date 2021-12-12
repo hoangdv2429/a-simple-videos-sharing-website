@@ -32,3 +32,50 @@
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
 <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+
+<a href="/videos/<%= @video.id %>/like">
+      <br>
+      LIKE
+      <br>
+</a>
+
+<a href="/videos/<%= @video.id %>/dislike">
+      DISLIKE
+</a>
+
+<%= form_with(model: @comment) do |form| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+        <% @comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :video_id %>
+    <%= form.hidden_field :video_id, value: @video.id%>
+  </div>
+
+  <% if  user_signed_in? %>
+    <div class="field">
+      <%= form.label :comment %>
+      <%= form.text_field :comment %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+<% end %>
+
+<% @comments.each do |comment| %>
+  <div>
+    <div><%= comment.user_id %></div>
+    <div><%= comment.comment %></div>
+  </div>
+<% end %>
