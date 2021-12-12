@@ -1,29 +1,23 @@
 class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
 
+  impressionist :actions=>[:show,:index]
+  # GET view count
+  def show
+    @videos = Video.find
+    impressionist(@videos)
+ end
+
   # GET /videos or /videos.json
   def index
-    @categories = Category.all
-
-    cate = params[:cate]
-    if !cate.nil?
-      @videos = Video.where(:category_id => cate)
-    else
-      @videos = Video.all
-    end
-
-    if params[:search].present?
-      @videos = Video.where(["category_id IN (?)", Category.where(["category LIKE ?","%#{params[:search]}%"]).pluck(:id)])
-    else
-      @videos = Video.all
-    end
+    @videos = Video.all
   end
 
   # GET /videos/1 or /videos/1.json
   def show
   end
 
-  # GET /videos/new 
+  # GET /videos/new
   def new
     @video = Video.new
   end
@@ -77,6 +71,6 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:title, :description, :clip, :thumbnail)
+      params.require(:video).permit(:title, :category_id, :description, :clip, :thumbnail)
     end
 end
