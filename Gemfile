@@ -25,13 +25,19 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
-# Use impessionist to count views
+# Oauth2 for vimeo API
+gem 'oauth2'
+
+# VimeoMe2 API
+gem 'vimeo_me2', :git => "https://github.com/bo-oz/vimeo_me2.git"
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.4', require: false
+
 gem 'impressionist',
   git: 'https://github.com/charlotte-ruby/impressionist.git',
   ref: '46a582ff8cd3496da64f174b30b91f9d97e86643'
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -59,5 +65,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+gem 'devise'
 gem 'wdm', '>= 0.1.0'

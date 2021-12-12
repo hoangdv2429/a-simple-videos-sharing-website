@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<% @categories.each do |category| %>
+  <%= link_to category.category, videos_path(:cate => category.id) %>
+<% end %>
+
+<%= form_tag videos_path, :method => 'get' do %>
+  <%= text_field_tag :search, params[:search], :placeholder => 'Search' %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <h1>Videos</h1>
 
 <table>
@@ -36,15 +45,11 @@
 			<div class="col-md-1">
 				<a href="/videos/<%= video.id %>">
 					<%= image_tag(video.thumbnail, size: "250", data: { title: video.title }) %>
-          <br>
           <strong><%= video.title %></strong>
 				</a>
         <br>
-        <p> category: <%= Category.find(video.category_id.to_i).category %></p>
-        <td> duration: <%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
-        <p> description: <%= video.description %></p>
-        <p> <%= video.impressionist_count %> views</p> 
-       
+        <td><%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
+        <td><%= video.description %></td>
 			</div>	
 
 		<% end %>
