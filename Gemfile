@@ -70,9 +70,4 @@ gem 'devise'
 
 
 
-# gem 'wdm', '>= 0.1.0'
 
-<<<<<<< HEAD
-=======
-# gem 'wdm', '>= 0.1.0'
->>>>>>> parent of 934fbdaa (feat: add search categories)
