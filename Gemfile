@@ -65,10 +65,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-<<<<<<< HEAD
 #gem 'wdm', '>= 0.1.0'
 gem 'devise' 
-=======
+
+
 
 # gem 'wdm', '>= 0.1.0'
->>>>>>> parent of 934fbdaa (feat: add search categories)
+
