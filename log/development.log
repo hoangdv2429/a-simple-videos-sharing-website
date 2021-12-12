@@ -4477,3 +4477,1373 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPublishLikesAndViews (20211211151642)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211211151642"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/videos" for ::1 at 2021-12-11 22:20:41 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (2.5ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (2.4ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  Rendered videos/index.html.erb within layouts/application (Duration: 338.2ms | Allocations: 26729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 352.8ms | Allocations: 30253)
+Completed 200 OK in 360ms (Views: 351.8ms | ActiveRecord: 2.5ms | Allocations: 32904)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11deea22dd7d6e36a3935857e3d7812e0cadc341/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:20:41 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11deea22dd7d6e36a3935857e3d7812e0cadc341", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: 0y4i3cr4t1pyr9zwwi76yutsh5hm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--32062494e085af9af2def65d05347ffe6c07886d/209377353_766719477336548_6498887242393581624_n.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--32062494e085af9af2def65d05347ffe6c07886d/209377353_766719477336548_6498887242393581624_n.jpg
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1416f0cd54b76ba8de9b0720c936e4447593955d/79224969_p0.png" for ::1 at 2021-12-11 22:20:41 +0700
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms | Allocations: 3254)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1416f0cd54b76ba8de9b0720c936e4447593955d", "filename"=>"79224969_p0"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 6vrvb6yoh23tds54dca7b9p8h7xu (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b3abc77cf81c6a5763d096048d9d4ba63df65ee/79224969_p0.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b3abc77cf81c6a5763d096048d9d4ba63df65ee/79224969_p0.png
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms | Allocations: 2875)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--32062494e085af9af2def65d05347ffe6c07886d/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:20:41 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b3abc77cf81c6a5763d096048d9d4ba63df65ee/79224969_p0.png" for ::1 at 2021-12-11 22:20:41 +0700
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 486)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 316)
+
+
+Started GET "/videos/4" for ::1 at 2021-12-11 22:20:43 +0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:62:in `set_video'
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  Rendered videos/show.html.erb within layouts/application (Duration: 16.0ms | Allocations: 4673)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 8246)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 1.0ms | Allocations: 9860)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:20:43 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62", "filename"=>"file_example_MP4_480_1_5MG"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: fu6nt5b204zv1299gf218wid6fup (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjI1OjQzLjQwMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26d68293fd68fcd16af6c9b1b1e5c237fdf8272f/file_example_MP4_480_1_5MG.mp4)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjI1OjQzLjQwMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26d68293fd68fcd16af6c9b1b1e5c237fdf8272f/file_example_MP4_480_1_5MG.mp4
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1626)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--32062494e085af9af2def65d05347ffe6c07886d/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:20:43 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b3abc77cf81c6a5763d096048d9d4ba63df65ee/79224969_p0.png" for ::1 at 2021-12-11 22:20:43 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjI1OjQzLjQwMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--26d68293fd68fcd16af6c9b1b1e5c237fdf8272f/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:20:43 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 334)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--32062494e085af9af2def65d05347ffe6c07886d/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:20:43 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 429)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:20:43 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62", "filename"=>"file_example_MP4_480_1_5MG"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: fu6nt5b204zv1299gf218wid6fup (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjI1OjQzLjU2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8bd6bc01eb10c3e0dc6e78169d95b3384ec9907d/file_example_MP4_480_1_5MG.mp4)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjI1OjQzLjU2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8bd6bc01eb10c3e0dc6e78169d95b3384ec9907d/file_example_MP4_480_1_5MG.mp4
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1588)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjI1OjQzLjU2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8bd6bc01eb10c3e0dc6e78169d95b3384ec9907d/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:20:43 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 335)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--32062494e085af9af2def65d05347ffe6c07886d/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:20:45 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNToyNTo0MS44NjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b3abc77cf81c6a5763d096048d9d4ba63df65ee/79224969_p0.png" for ::1 at 2021-12-11 22:20:45 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjI1OjQzLjU2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8bd6bc01eb10c3e0dc6e78169d95b3384ec9907d/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:20:45 +0700
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 1121)
+
+
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 4ms (ActiveRecord: 0.0ms | Allocations: 430)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPublishLikesAndViews (20211211152310)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "videos" ADD "likes" integer DEFAULT 0[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "videos" ADD "views" integer DEFAULT 0[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211211152310"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateImpressionsTable (20211211153908)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "impressions"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "impressions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "impressionable_type" varchar, "impressionable_id" integer, "user_id" integer, "controller_name" varchar, "action_name" varchar, "view_name" varchar, "request_hash" varchar, "ip_address" varchar, "session_hash" varchar, "message" text, "referrer" text, "params" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "impressionable_type_message_index" ON "impressions" ("impressionable_type", "message", "impressionable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "poly_request_index" ON "impressions" ("impressionable_type", "impressionable_id", "request_hash")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "poly_ip_index" ON "impressions" ("impressionable_type", "impressionable_id", "ip_address")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "poly_session_index" ON "impressions" ("impressionable_type", "impressionable_id", "session_hash")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "controlleraction_request_index" ON "impressions" ("controller_name", "action_name", "request_hash")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "controlleraction_ip_index" ON "impressions" ("controller_name", "action_name", "ip_address")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "controlleraction_session_index" ON "impressions" ("controller_name", "action_name", "session_hash")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "poly_params_request_index" ON "impressions" ("impressionable_type", "impressionable_id", "params")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_impressions_on_user_id" ON "impressions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211211153908"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/videos" for ::1 at 2021-12-11 22:45:51 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `impressionist' for VideosController:Class):
+  
+app/controllers/videos_controller.rb:2:in `<class:VideosController>'
+app/controllers/videos_controller.rb:1:in `<main>'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/videos" for ::1 at 2021-12-11 22:46:22 +0700
+  
+NoMethodError (undefined method `impressionist' for VideosController:Class):
+  
+app/controllers/videos_controller.rb:2:in `<class:VideosController>'
+app/controllers/videos_controller.rb:1:in `<main>'
+Started GET "/videos" for ::1 at 2021-12-11 22:46:43 +0700
+  
+NoMethodError (undefined method `impressionist' for VideosController:Class):
+  
+app/controllers/videos_controller.rb:4:in `<class:VideosController>'
+app/controllers/videos_controller.rb:1:in `<main>'
+Started GET "/videos" for ::1 at 2021-12-11 22:46:55 +0700
+  
+NoMethodError (undefined method `impressionist' for VideosController:Class):
+  
+app/controllers/videos_controller.rb:4:in `<class:VideosController>'
+app/controllers/videos_controller.rb:1:in `<main>'
+Started GET "/videos" for ::1 at 2021-12-11 22:48:43 +0700
+  
+NoMethodError (undefined method `impressionist' for VideosController:Class):
+  
+app/controllers/videos_controller.rb:4:in `<class:VideosController>'
+app/controllers/videos_controller.rb:1:in `<main>'
+Started GET "/videos" for ::1 at 2021-12-11 22:50:03 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (3.3ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "70f60a6c2f029a53d1f73278bb70ad1730f10b2fcc7c1677b599b897ca9b278f"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 15:50:03.730550"], ["updated_at", "2021-12-11 15:50:03.730550"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  Rendered videos/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2244)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3136)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 5.0ms | Allocations: 32955)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Videos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @videos.each do |video| %>
+      <tr>
+        <td><%= video.title %></td>
+        <td><%= video.description %></td>
+        <td><%= link_to 'Show', video %></td>
+        <td><%= link_to 'Edit', edit_video_path(video) %></td>
+        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if @videos.count == 0%>
+  <h1> there are no videos belongs to this category :< !!　申し訳ございません</h1>
+
+<% else %>	
+
+	<div class="row">
+
+		<% @videos.each do |video| %>
+
+			<div class="col-md-1">
+				<a href="/videos/<%= video.id %>">
+					<%= image_tag(video.thumbnail, size: "250", data: { title: video.title }) %>
+          <strong><%= video.title %></strong>
+				</a>
+        <br>
+        <td><%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
+        <td><%= video.description %></td>
+        <td><%= views: "#{video.impressionist_count} views" %>
+			</div>	
+
+		<% end %>
+
+	</div>
+<%end%>
+
+<br>
+ 
+<%= link_to 'New Video', new_video_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Videos</h1>
+4:    
+5:    <table>
+6:      <thead>
+7:        <tr>
+8:          <th>Title</th>
+9:          <th>Description</th>
+10:          <th colspan="3"></th>
+11:        </tr>
+12:      </thead>
+13:    
+14:      <tbody>
+15:        <% @videos.each do |video| %>
+16:          <tr>
+17:            <td><%= video.title %></td>
+18:            <td><%= video.description %></td>
+19:            <td><%= link_to 'Show', video %></td>
+20:            <td><%= link_to 'Edit', edit_video_path(video) %></td>
+21:            <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+22:          </tr>
+23:        <% end %>
+24:      </tbody>
+25:    </table>
+26:    
+27:    <% if @videos.count == 0%>
+28:      <h1> there are no videos belongs to this category :< !!　申し訳ございません</h1>
+29:    
+30:    <% else %>	
+31:    
+32:    	<div class="row">
+33:    
+34:    		<% @videos.each do |video| %>
+35:    
+36:    			<div class="col-md-1">
+37:    				<a href="/videos/<%= video.id %>">
+38:    					<%= image_tag(video.thumbnail, size: "250", data: { title: video.title }) %>
+39:              <strong><%= video.title %></strong>
+40:    				</a>
+41:            <br>
+42:            <td><%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
+43:            <td><%= video.description %></td>
+44:            <td><%= views: "#{video.impressionist_count} views" %>
+45:    			</div>	
+46:    
+47:    		<% end %>
+48:    
+49:    	</div>
+50:    <%end%>
+51:    
+52:    <br>
+53:     
+54:    <%= link_to 'New Video', new_video_path %>
+  
+app/views/videos/index.html.erb:44: syntax error, unexpected label
+app/views/videos/index.html.erb:44: syntax error, unexpected label
+app/views/videos/index.html.erb:44: syntax error, unexpected label
+app/views/videos/index.html.erb:44: syntax error, unexpected label
+app/views/videos/index.html.erb:44: syntax error, unexpected label
+app/views/videos/index.html.erb:44: syntax error, unexpected label
+Started GET "/videos" for ::1 at 2021-12-11 22:50:46 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.7ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "d9812c98996b2fac88b2d8a167eddc3760a4cd80ee8a0775318998816fe7afe1"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 15:50:46.351651"], ["updated_at", "2021-12-11 15:50:46.351651"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (2.2ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (2.6ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  Rendered videos/index.html.erb within layouts/application (Duration: 388.7ms | Allocations: 40160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 414.2ms | Allocations: 46241)
+Completed 200 OK in 431ms (Views: 412.3ms | ActiveRecord: 7.0ms | Allocations: 51840)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11deea22dd7d6e36a3935857e3d7812e0cadc341/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:50:46 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11deea22dd7d6e36a3935857e3d7812e0cadc341", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1416f0cd54b76ba8de9b0720c936e4447593955d/79224969_p0.png" for ::1 at 2021-12-11 22:50:47 +0700
+[36m  Disk Storage (6.7ms) [0m[34mGenerated URL for file at key: 0y4i3cr4t1pyr9zwwi76yutsh5hm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg
+Completed 302 Found in 15ms (ActiveRecord: 0.2ms | Allocations: 3745)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1416f0cd54b76ba8de9b0720c936e4447593955d", "filename"=>"79224969_p0"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 6vrvb6yoh23tds54dca7b9p8h7xu (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMjNaIiwicHVyIjoiYmxvYl9rZXkifX0=--33392822d93511f3df456c8236348eedd2f026da/79224969_p0.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMjNaIiwicHVyIjoiYmxvYl9rZXkifX0=--33392822d93511f3df456c8236348eedd2f026da/79224969_p0.png
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms | Allocations: 2788)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:50:47 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMjNaIiwicHVyIjoiYmxvYl9rZXkifX0=--33392822d93511f3df456c8236348eedd2f026da/79224969_p0.png" for ::1 at 2021-12-11 22:50:47 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 525)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 647)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 22:51:03 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.8ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "5248689cbb0a3e7f7b0716e8367cfc4c92c6819afc8503a0cdbf280a67cafb6e"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 15:51:03.753940"], ["updated_at", "2021-12-11 15:51:03.753940"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.4ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  Rendered videos/index.html.erb within layouts/application (Duration: 219.7ms | Allocations: 17825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 233.6ms | Allocations: 21712)
+Completed 200 OK in 260ms (Views: 233.9ms | ActiveRecord: 5.5ms | Allocations: 27303)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:51:04 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 399)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMjNaIiwicHVyIjoiYmxvYl9rZXkifX0=--33392822d93511f3df456c8236348eedd2f026da/79224969_p0.png" for ::1 at 2021-12-11 22:51:04 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/videos/4" for ::1 at 2021-12-11 22:51:06 +0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:69:in `set_video'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (1.0ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "impressionable_id", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "referrer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["impressionable_id", 4], ["controller_name", "videos"], ["action_name", "show"], ["request_hash", "c38dc8bc1f27a2e5b5f7544a506dea30e9ddabb5a34851efc791919fcabd6774"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["referrer", "http://localhost:3000/videos"], ["created_at", "2021-12-11 15:51:06.542150"], ["updated_at", "2021-12-11 15:51:06.542150"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  Rendered videos/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 4551)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 7953)
+Completed 200 OK in 39ms (Views: 21.7ms | ActiveRecord: 3.0ms | Allocations: 13395)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:51:06 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62", "filename"=>"file_example_MP4_480_1_5MG"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: fu6nt5b204zv1299gf218wid6fup (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjU2OjA2LjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3896ffdf072b0def2e076de50887aac56bd58fcf/file_example_MP4_480_1_5MG.mp4)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjU2OjA2LjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3896ffdf072b0def2e076de50887aac56bd58fcf/file_example_MP4_480_1_5MG.mp4
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 2070)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:51:06 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMjNaIiwicHVyIjoiYmxvYl9rZXkifX0=--33392822d93511f3df456c8236348eedd2f026da/79224969_p0.png" for ::1 at 2021-12-11 22:51:06 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjU2OjA2LjYyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3896ffdf072b0def2e076de50887aac56bd58fcf/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:51:06 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 372)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:51:06 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:51:06 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62", "filename"=>"file_example_MP4_480_1_5MG"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: fu6nt5b204zv1299gf218wid6fup (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjU2OjA2Ljc4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--919b5b71d9c67fd78c2e2890686a143452188454/file_example_MP4_480_1_5MG.mp4)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjU2OjA2Ljc4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--919b5b71d9c67fd78c2e2890686a143452188454/file_example_MP4_480_1_5MG.mp4
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1619)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjU2OjA2Ljc4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--919b5b71d9c67fd78c2e2890686a143452188454/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:51:06 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 347)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:51:08 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMjNaIiwicHVyIjoiYmxvYl9rZXkifX0=--33392822d93511f3df456c8236348eedd2f026da/79224969_p0.png" for ::1 at 2021-12-11 22:51:08 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 687)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 1066)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE1OjU2OjA2Ljc4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--919b5b71d9c67fd78c2e2890686a143452188454/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:51:08 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 517)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 22:51:12 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "3ad3540b56adbe40dd71ecb9add73f70db9b539e0e9c0338e4dff6081357e39f"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 15:51:12.856701"], ["updated_at", "2021-12-11 15:51:12.856701"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.5ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  Rendered videos/index.html.erb within layouts/application (Duration: 210.4ms | Allocations: 17121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 217.8ms | Allocations: 20751)
+Completed 200 OK in 229ms (Views: 217.0ms | ActiveRecord: 4.7ms | Allocations: 25939)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:51:13 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMjNaIiwicHVyIjoiYmxvYl9rZXkifX0=--33392822d93511f3df456c8236348eedd2f026da/79224969_p0.png" for ::1 at 2021-12-11 22:51:13 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 22:52:17 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "473c85e14885a1024bc1d98f5129444d3154cdf1c95758fefc2939fbe9cbad28"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 15:52:17.880971"], ["updated_at", "2021-12-11 15:52:17.880971"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  Rendered videos/index.html.erb within layouts/application (Duration: 201.3ms | Allocations: 15985)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 209.0ms | Allocations: 19710)
+Completed 200 OK in 224ms (Views: 209.5ms | ActiveRecord: 4.9ms | Allocations: 25044)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--8edbb44e7384d822c5b61dfc77e892bc3d704aed/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:52:18 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNTo1NTo0Ny4wMjNaIiwicHVyIjoiYmxvYl9rZXkifX0=--33392822d93511f3df456c8236348eedd2f026da/79224969_p0.png" for ::1 at 2021-12-11 22:52:18 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeleteViewsCountUseImpressionistInstead (20211211155335)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avideos" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "description" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "likes" integer DEFAULT 0, "views" integer DEFAULT 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "avideos" ("id","title","description","created_at","updated_at","likes","views")
+                     SELECT "id","title","description","created_at","updated_at","likes","views" FROM "videos"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "videos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "videos" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "description" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "likes" integer DEFAULT 0)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "videos" ("id","title","description","created_at","updated_at","likes")
+                     SELECT "id","title","description","created_at","updated_at","likes" FROM "avideos"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "avideos"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211211155335"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/videos/4" for ::1 at 2021-12-11 22:59:31 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:69:in `set_video'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "impressionable_id", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "referrer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["impressionable_id", 4], ["controller_name", "videos"], ["action_name", "show"], ["request_hash", "4fae826961815c611dbf0a30515015fed64d36ef0d25b31065c924009d94ef2e"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["referrer", "http://localhost:3000/videos"], ["created_at", "2021-12-11 15:59:31.782820"], ["updated_at", "2021-12-11 15:59:31.782820"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  Rendered videos/show.html.erb within layouts/application (Duration: 42.9ms | Allocations: 22098)
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 22180)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 2.2ms | Allocations: 37567)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<ActionView::Base:0x0000000000ae38>
+Did you mean?  @video):
+    28:   <strong>Description:</strong>
+    29:   <%= @video.description %>
+    30: </p>
+    31: <p> <strong>view counts:</strong> <%= video.impressionist_count %> views</p>
+    32: 
+    33: <%= link_to 'Edit', edit_video_path(@video) %> |
+    34: <%= link_to 'Back', videos_path %>
+  
+app/views/videos/show.html.erb:31
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11deea22dd7d6e36a3935857e3d7812e0cadc341/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:59:32 +0700
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1416f0cd54b76ba8de9b0720c936e4447593955d/79224969_p0.png" for ::1 at 2021-12-11 22:59:32 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11deea22dd7d6e36a3935857e3d7812e0cadc341", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1416f0cd54b76ba8de9b0720c936e4447593955d", "filename"=>"79224969_p0"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 0y4i3cr4t1pyr9zwwi76yutsh5hm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg)[0m
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 6vrvb6yoh23tds54dca7b9p8h7xu (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--729e94a869252f980d317c08cc6e3fbc8dbef4fa/79224969_p0.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--729e94a869252f980d317c08cc6e3fbc8dbef4fa/79224969_p0.png
+Completed 302 Found in 10ms (ActiveRecord: 0.1ms | Allocations: 5058)
+
+
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 4195)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:59:32 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--729e94a869252f980d317c08cc6e3fbc8dbef4fa/79224969_p0.png" for ::1 at 2021-12-11 22:59:32 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 506)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 654)
+
+
+Started GET "/videos/4" for ::1 at 2021-12-11 22:59:42 +0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:69:in `set_video'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "impressionable_id", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["impressionable_id", 4], ["controller_name", "videos"], ["action_name", "show"], ["request_hash", "d754445f19de9a720b2b8c582397a5d7b880e1c587746206659711d3addabc4a"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 15:59:42.238742"], ["updated_at", "2021-12-11 15:59:42.238742"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/show.html.erb:31
+  Rendered videos/show.html.erb within layouts/application (Duration: 15.3ms | Allocations: 7512)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 11428)
+Completed 200 OK in 40ms (Views: 26.7ms | ActiveRecord: 3.9ms | Allocations: 19294)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:59:42 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:59:42 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62", "filename"=>"file_example_MP4_480_1_5MG"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: fu6nt5b204zv1299gf218wid6fup (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjA0OjQyLjUwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8b291b8d1281fbe8e29aec27c82a30ae495200c9/file_example_MP4_480_1_5MG.mp4)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjA0OjQyLjUwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8b291b8d1281fbe8e29aec27c82a30ae495200c9/file_example_MP4_480_1_5MG.mp4
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1648)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjA0OjQyLjUwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8b291b8d1281fbe8e29aec27c82a30ae495200c9/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:59:42 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 348)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:59:42 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:59:42 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62", "filename"=>"file_example_MP4_480_1_5MG"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Processing by ActiveStorage::DiskController#show as JPEG
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: fu6nt5b204zv1299gf218wid6fup (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjA0OjQyLjU4OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3966b9a454337b8290138fa720812f78a79aaa4b/file_example_MP4_480_1_5MG.mp4)[0m
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjA0OjQyLjU4OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3966b9a454337b8290138fa720812f78a79aaa4b/file_example_MP4_480_1_5MG.mp4
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 2268)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 436)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjA0OjQyLjU4OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3966b9a454337b8290138fa720812f78a79aaa4b/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:59:42 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 347)
+
+
+Started GET "/videos/4" for ::1 at 2021-12-11 22:59:57 +0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:69:in `set_video'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.7ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "impressionable_id", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["impressionable_id", 4], ["controller_name", "videos"], ["action_name", "show"], ["request_hash", "307390ea7d9f17acef278274558fc508d72facfcb0c852fcb766f7e201cceeca"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 15:59:57.535507"], ["updated_at", "2021-12-11 15:59:57.535507"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/show.html.erb:31
+  Rendered videos/show.html.erb within layouts/application (Duration: 17.6ms | Allocations: 5758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 9497)
+Completed 200 OK in 44ms (Views: 28.9ms | ActiveRecord: 4.2ms | Allocations: 15465)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 22:59:57 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjA0OjQyLjU4OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3966b9a454337b8290138fa720812f78a79aaa4b/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 22:59:58 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 348)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 23:00:16 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (3.4ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "referrer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "b75277773ad8ac56bf5b07d594eb5e8c76fc311ee82959186f3e24c0a9aa2a97"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["referrer", "http://localhost:3000/videos"], ["created_at", "2021-12-11 16:00:16.231137"], ["updated_at", "2021-12-11 16:00:16.231137"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (10.1ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (3.1ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  Rendered videos/index.html.erb within layouts/application (Duration: 420.2ms | Allocations: 16575)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 433.1ms | Allocations: 20298)
+Completed 200 OK in 452ms (Views: 432.6ms | ActiveRecord: 8.4ms | Allocations: 25929)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:00:16 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--729e94a869252f980d317c08cc6e3fbc8dbef4fa/79224969_p0.png" for ::1 at 2021-12-11 23:00:16 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjA0OjQyLjU4OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3966b9a454337b8290138fa720812f78a79aaa4b/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 23:00:16 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 354)
+
+
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms | Allocations: 1075)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 23:01:55 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "470395d67213a26bb9c0d3a50b6002bab9e14d4e96475d3a1dbaf450345b5466"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 16:01:56.002264"], ["updated_at", "2021-12-11 16:01:56.002264"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  Rendered videos/index.html.erb within layouts/application (Duration: 239.0ms | Allocations: 16433)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 248.7ms | Allocations: 20155)
+Completed 200 OK in 265ms (Views: 249.8ms | ActiveRecord: 5.2ms | Allocations: 25563)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:01:56 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--729e94a869252f980d317c08cc6e3fbc8dbef4fa/79224969_p0.png" for ::1 at 2021-12-11 23:01:56 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 23:02:35 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "2e135a3a04d6209b2d1c711bff9f783bbd34634197dfff2f677ced0c8d424092"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 16:02:35.580361"], ["updated_at", "2021-12-11 16:02:35.580361"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  Rendered videos/index.html.erb within layouts/application (Duration: 201.7ms | Allocations: 14134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 212.3ms | Allocations: 19963)
+Completed 200 OK in 225ms (Views: 212.6ms | ActiveRecord: 4.8ms | Allocations: 25371)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:02:35 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--729e94a869252f980d317c08cc6e3fbc8dbef4fa/79224969_p0.png" for ::1 at 2021-12-11 23:02:35 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 23:02:48 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "1b9754edbc1fed8cc09a29d147e86fbe3a31aee7bbfb466845589d5dd26e21e1"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 16:02:48.296228"], ["updated_at", "2021-12-11 16:02:48.296228"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.4ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:42
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:44
+  Rendered videos/index.html.erb within layouts/application (Duration: 201.6ms | Allocations: 17564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 209.3ms | Allocations: 21516)
+Completed 200 OK in 224ms (Views: 210.4ms | ActiveRecord: 4.6ms | Allocations: 28658)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:02:48 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 392)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--729e94a869252f980d317c08cc6e3fbc8dbef4fa/79224969_p0.png" for ::1 at 2021-12-11 23:02:48 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 23:03:04 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "59bfe682bd75bce6692effc116e79f1c03b224a355cc309bc3f7b070027e440b"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 16:03:04.218521"], ["updated_at", "2021-12-11 16:03:04.218521"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:45
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+[36m  Disk Storage (2.6ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:45
+  Rendered videos/index.html.erb within layouts/application (Duration: 227.0ms | Allocations: 16246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 235.8ms | Allocations: 19964)
+Completed 200 OK in 247ms (Views: 236.2ms | ActiveRecord: 3.0ms | Allocations: 25372)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--c3b53f515f1b995b0acd746add5d7f4398e31466/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:03:05 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjowNDozMi4zMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--729e94a869252f980d317c08cc6e3fbc8dbef4fa/79224969_p0.png" for ::1 at 2021-12-11 23:03:05 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 23:05:50 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.6ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "5e4168c2c3224123a726cfb9d08ce4a3bc9722f80ecb34e21d4cbbd1c8ff3e60"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 16:05:50.680264"], ["updated_at", "2021-12-11 16:05:50.680264"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:45
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+[36m  Disk Storage (1.8ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:45
+  Rendered videos/index.html.erb within layouts/application (Duration: 201.9ms | Allocations: 16276)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 209.0ms | Allocations: 19994)
+Completed 200 OK in 224ms (Views: 209.4ms | ActiveRecord: 4.8ms | Allocations: 25402)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11deea22dd7d6e36a3935857e3d7812e0cadc341/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:05:50 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--11deea22dd7d6e36a3935857e3d7812e0cadc341", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: 0y4i3cr4t1pyr9zwwi76yutsh5hm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MC45ODRaIiwicHVyIjoiYmxvYl9rZXkifX0=--a75b892bc304a3916b0b1290db0f3b625cc6f9de/209377353_766719477336548_6498887242393581624_n.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MC45ODRaIiwicHVyIjoiYmxvYl9rZXkifX0=--a75b892bc304a3916b0b1290db0f3b625cc6f9de/209377353_766719477336548_6498887242393581624_n.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1697)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1416f0cd54b76ba8de9b0720c936e4447593955d/79224969_p0.png" for ::1 at 2021-12-11 23:05:51 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MC45ODRaIiwicHVyIjoiYmxvYl9rZXkifX0=--a75b892bc304a3916b0b1290db0f3b625cc6f9de/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:05:51 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1416f0cd54b76ba8de9b0720c936e4447593955d", "filename"=>"79224969_p0"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: 6vrvb6yoh23tds54dca7b9p8h7xu (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MS4wNjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f5b3b4950530e5b64d6183965e52889f73a3d455/79224969_p0.png)[0m
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 343)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MS4wNjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f5b3b4950530e5b64d6183965e52889f73a3d455/79224969_p0.png
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms | Allocations: 2202)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MS4wNjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f5b3b4950530e5b64d6183965e52889f73a3d455/79224969_p0.png" for ::1 at 2021-12-11 23:05:51 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Started GET "/videos" for ::1 at 2021-12-11 23:08:18 +0700
+Processing by VideosController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.7ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["controller_name", "videos"], ["action_name", "index"], ["request_hash", "c99086fdd76366acce45c24158483c07322551ac9ac5c809adf71b498f3a7414"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 16:08:18.603248"], ["updated_at", "2021-12-11 16:08:18.603248"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:27
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+[36m  Disk Storage (2.5ms) [0m[34mDownloaded file from key: fu6nt5b204zv1299gf218wid6fup[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:45
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:38
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/videos/index.html.erb:43
+[36m  Disk Storage (2.8ms) [0m[34mDownloaded file from key: 185lnxvftz06n41ft0iq0zpkytzi[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 5], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/index.html.erb:45
+  Rendered videos/index.html.erb within layouts/application (Duration: 297.3ms | Allocations: 16438)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 310.4ms | Allocations: 20157)
+Completed 200 OK in 328ms (Views: 310.6ms | ActiveRecord: 3.5ms | Allocations: 25564)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MC45ODRaIiwicHVyIjoiYmxvYl9rZXkifX0=--a75b892bc304a3916b0b1290db0f3b625cc6f9de/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:08:19 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MS4wNjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f5b3b4950530e5b64d6183965e52889f73a3d455/79224969_p0.png" for ::1 at 2021-12-11 23:08:19 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 683)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 448)
+
+
+Started GET "/videos/4" for ::1 at 2021-12-11 23:08:42 +0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:69:in `set_video'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.7ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "impressionable_id", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "referrer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["impressionable_id", 4], ["controller_name", "videos"], ["action_name", "show"], ["request_hash", "d2699729e6ee1211a0ff9112686ddf7d01543899f3e44efeef48d7ffaef98c9e"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["referrer", "http://localhost:3000/videos"], ["created_at", "2021-12-11 16:08:42.399777"], ["updated_at", "2021-12-11 16:08:42.399777"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/show.html.erb:31
+  Rendered videos/show.html.erb within layouts/application (Duration: 23.1ms | Allocations: 9742)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 9820)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.5ms | Allocations: 15948)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `video' for #<ActionView::Base:0x0000000000c328>
+Did you mean?  @video):
+    29:   <%= @video.description %>
+    30: </p>
+    31: <p> <strong>View counts:</strong> <%= @video.impressionist_count %> views</p>
+    32: <p> <%= video.likes %> likes</p> 
+    33: 
+    34: <%= link_to 'Edit', edit_video_path(@video) %> |
+    35: <%= link_to 'Back', videos_path %>
+  
+app/views/videos/show.html.erb:32
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MC45ODRaIiwicHVyIjoiYmxvYl9rZXkifX0=--a75b892bc304a3916b0b1290db0f3b625cc6f9de/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:08:42 +0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOblp5ZG1JMmVXOW9Nak4wWkhNMU5HUmpZVGRpT1hBNGFEZDRkUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpjNU1qSTBPVFk1WDNBd0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTnpreU1qUTVOamxmY0RBdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZEb1JjMlZ5ZG1salpWOXVZVzFsT2dwc2IyTmhiQT09IiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MS4wNjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f5b3b4950530e5b64d6183965e52889f73a3d455/79224969_p0.png" for ::1 at 2021-12-11 23:08:42 +0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"79224969_p0"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 418)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 591)
+
+
+Started GET "/videos/4" for ::1 at 2021-12-11 23:08:51 +0700
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:69:in `set_video'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImpression Create (0.7ms)[0m  [1m[32mINSERT INTO "impressions" ("impressionable_type", "impressionable_id", "controller_name", "action_name", "request_hash", "ip_address", "session_hash", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["impressionable_type", "Video"], ["impressionable_id", 4], ["controller_name", "videos"], ["action_name", "show"], ["request_hash", "1fd869e9a178069ed35cbf6734db0b8a6ff2671fcacb1a574c7f8748729c0a53"], ["ip_address", "::1"], ["session_hash", "2d584c94f00bdb92e426de50c58e0280"], ["created_at", "2021-12-11 16:08:51.009787"], ["updated_at", "2021-12-11 16:08:51.009787"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "thumbnail"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:20
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Video"], ["name", "clip"], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/videos/show.html.erb:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(DISTINCT "impressions"."request_hash") FROM "impressions" WHERE "impressions"."impressionable_id" = ? AND "impressions"."impressionable_type" = ?[0m  [["impressionable_id", 4], ["impressionable_type", "Video"]]
+  ↳ app/views/videos/show.html.erb:31
+  Rendered videos/show.html.erb within layouts/application (Duration: 21.9ms | Allocations: 5772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 9514)
+Completed 200 OK in 48ms (Views: 32.4ms | ActiveRecord: 4.5ms | Allocations: 15489)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 23:08:52 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62", "filename"=>"file_example_MP4_480_1_5MG"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: fu6nt5b204zv1299gf218wid6fup (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjEzOjUyLjAxOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9b44e76095a3745c08b54b6ad954a198b5de946d/file_example_MP4_480_1_5MG.mp4)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjEzOjUyLjAxOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9b44e76095a3745c08b54b6ad954a198b5de946d/file_example_MP4_480_1_5MG.mp4
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1699)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MC45ODRaIiwicHVyIjoiYmxvYl9rZXkifX0=--a75b892bc304a3916b0b1290db0f3b625cc6f9de/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:08:52 +0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 343)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjEzOjUyLjAxOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9b44e76095a3745c08b54b6ad954a198b5de946d/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 23:08:52 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 348)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 23:08:52 +0700
+Processing by ActiveStorage::Blobs::RedirectController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b48fc7d8de52e10e371a98e89f311f5c0376bc62", "filename"=>"file_example_MP4_480_1_5MG"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: fu6nt5b204zv1299gf218wid6fup (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjEzOjUyLjE3N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--76d9a9887733a462ab1d4e73ba710d82664b982a/file_example_MP4_480_1_5MG.mp4)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjEzOjUyLjE3N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--76d9a9887733a462ab1d4e73ba710d82664b982a/file_example_MP4_480_1_5MG.mp4
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNSGswYVROamNqUjBNWEI1Y2psNmQzZHBOelo1ZFhSemFEVm9iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVl4cGJteHBibVU3SUdacGJHVnVZVzFsUFNJeU1Ea3pOemN6TlROZk56WTJOekU1TkRjM016TTJOVFE0WHpZME9UZzRPRGN5TkRJek9UTTFPREUyTWpSZmJpNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJd09UTTNOek0xTTE4M05qWTNNVGswTnpjek16WTFORGhmTmpRNU9EZzROekkwTWpNNU16VTRNVFl5TkY5dUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlVPaEZ6WlhKMmFXTmxYMjVoYldVNkNteHZZMkZzIiwiZXhwIjoiMjAyMS0xMi0xMVQxNjoxMDo1MC45ODRaIiwicHVyIjoiYmxvYl9rZXkifX0=--a75b892bc304a3916b0b1290db0f3b625cc6f9de/209377353_766719477336548_6498887242393581624_n.jpg" for ::1 at 2021-12-11 23:08:52 +0700
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2368)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"209377353_766719477336548_6498887242393581624_n"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 331)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhablUyYm5RMVlqSXdOSHAyTVRJNU9XZG1NakU0ZDJsa05tWjFjQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYTJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSm1hV3hsWDJWNFlXMXdiR1ZmVFZBMFh6UTRNRjh4WHpWTlJ5NXRjRFFpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJacGJHVmZaWGhoYlhCc1pWOU5VRFJmTkRnd1h6RmZOVTFITG0xd05BWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEblpwWkdWdkwyMXdOQVk3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTEyLTExVDE2OjEzOjUyLjE3N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--76d9a9887733a462ab1d4e73ba710d82664b982a/file_example_MP4_480_1_5MG.mp4" for ::1 at 2021-12-11 23:08:52 +0700
+Processing by ActiveStorage::DiskController#show as MP4
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"file_example_MP4_480_1_5MG"}
+Completed 206 Partial Content in 1ms (ActiveRecord: 0.0ms | Allocations: 347)
+
+

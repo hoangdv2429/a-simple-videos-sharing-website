@@ -36,11 +36,14 @@
 			<div class="col-md-1">
 				<a href="/videos/<%= video.id %>">
 					<%= image_tag(video.thumbnail, size: "250", data: { title: video.title }) %>
+          <br>
           <strong><%= video.title %></strong>
 				</a>
         <br>
-        <td><%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
-        <td><%= video.description %></td>
+        <td> duration: <%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
+        <p> description: <%= video.description %></p>
+        <p> <%= video.impressionist_count %> views</p> 
+       
 			</div>	
 
 		<% end %>

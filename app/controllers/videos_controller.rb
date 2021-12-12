@@ -1,6 +1,13 @@
 class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
 
+  impressionist :actions=>[:show,:index]
+  # GET view count
+  def show
+    @videos = Video.find
+    impressionist(@videos)
+ end
+
   # GET /videos or /videos.json
   def index
     @videos = Video.all

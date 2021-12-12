@@ -28,6 +28,8 @@
   <strong>Description:</strong>
   <%= @video.description %>
 </p>
+<p> <strong>View counts:</strong> <%= @video.impressionist_count %> views</p>
+<p> <%= @video.likes %> likes</p> 
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
