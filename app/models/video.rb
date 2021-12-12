@@ -1,21 +1,14 @@
 class Video < ApplicationRecord
-    is_impressionable #for view count
     has_one_attached :clip
     has_one_attached :thumbnail
     # belongs_to :user 
     # has_many_attached :comment 
-    belongs_to :category
+
 
     validates :title, presence: true
     validates :description, presence: true
     validate :correct_image_type
     validate :correct_video_type
-
-    # Increment likes counter
-    def like!
-        self.likes += 1
-        save
-    end
 
     private 
 
@@ -34,6 +27,4 @@ class Video < ApplicationRecord
             errors.add(:clip, 'must be attached.')
         end
     end
-
-
 end
