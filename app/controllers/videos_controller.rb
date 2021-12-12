@@ -28,9 +28,36 @@ class VideosController < ApplicationController
 
   # GET /videos/1 or /videos/1.json
   def show
+    @comment = Comment.new
+    @comments = Comment.all
   end
 
   # GET /videos/new
+  def like
+    
+    if user_signed_in? 
+    
+      @video = Video.find(params[:id])
+      @video.likes = @video.likes + 1
+      @video.save
+      redirect_to controller: 'videos', action: 'show', id: params[:id], status: :found
+
+    end
+
+  end
+
+  def dislike
+    if user_signed_in?
+    
+      @video = Video.find(params[:id])
+      @video.likes = @video.likes - 1
+      @video.save
+      redirect_to controller: 'videos', action: 'show', id: params[:id], status: :found
+
+    end
+  end   
+
+  # GET /videos/new 
   def new
     @video = Video.new
   end
