@@ -1,13 +1,6 @@
 class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
 
-  impressionist :actions=>[:show,:index]
-  # GET view count
-  def show
-    @videos = Video.find
-    impressionist(@videos)
- end
-
   # GET /videos or /videos.json
   def index
     @videos = Video.all
@@ -17,7 +10,7 @@ class VideosController < ApplicationController
   def show
   end
 
-  # GET /videos/new
+  # GET /videos/new 
   def new
     @video = Video.new
   end
@@ -71,6 +64,6 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:title, :category_id, :description, :clip, :thumbnail)
+      params.require(:video).permit(:title, :description, :clip, :thumbnail)
     end
 end
