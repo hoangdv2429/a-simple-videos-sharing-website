@@ -33,7 +33,7 @@ gem 'image_processing', '~> 1.2'
 
 # Use impessionist to count views
 gem 'impressionist',
-  git: 'git@github.com:charlotte-ruby/impressionist.git',
+  git: 'https://github.com/charlotte-ruby/impressionist.git',
   ref: '46a582ff8cd3496da64f174b30b91f9d97e86643'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -66,4 +66,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem 'wdm', '>= 0.1.0'
-gem 'devise'
+gem 'devise' 
