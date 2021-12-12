@@ -32,7 +32,9 @@ gem 'image_processing', '~> 1.2'
 # gem 'vimeo_me2', :git => "https://github.com/bo-oz/vimeo_me2.git"
 
 # Use impessionist to count views
-gem 'impressionist'
+gem 'impressionist',
+  git: 'git@github.com:charlotte-ruby/impressionist.git',
+  ref: '46a582ff8cd3496da64f174b30b91f9d97e86643'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -63,3 +65,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'wdm', '>= 0.1.0'

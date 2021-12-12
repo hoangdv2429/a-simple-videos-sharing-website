@@ -4,7 +4,7 @@ class Video < ApplicationRecord
     has_one_attached :thumbnail
     # belongs_to :user 
     # has_many_attached :comment 
-
+    belongs_to :category
 
     validates :title, presence: true
     validates :description, presence: true
