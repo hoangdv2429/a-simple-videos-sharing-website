@@ -25,15 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
-# Oauth2 for vimeo API
-# gem 'oauth2'
-
-# VimeoMe2 API
-# gem 'vimeo_me2', :git => "https://github.com/bo-oz/vimeo_me2.git"
-
 # Use impessionist to count views
 gem 'impressionist',
-  git: 'git@github.com:charlotte-ruby/impressionist.git',
+  git: 'https://github.com/charlotte-ruby/impressionist.git',
   ref: '46a582ff8cd3496da64f174b30b91f9d97e86643'
 
 # Reduces boot times through caching; required in config/boot.rb
