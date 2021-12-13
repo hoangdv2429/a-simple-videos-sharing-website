@@ -16,6 +16,10 @@
       <% f.label :age %><br />
       <%= f.number_field :age, class:"form-control", placeholder:"Age" %>
     </div> 
+
+    <div>
+        <%= image_tag(current_user.avatar, size:'300') %>
+    </div>
     
     <div class="field form-group">
       <label for="formFile" class="form-label">Avatar</label>
