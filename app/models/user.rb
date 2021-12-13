@@ -10,7 +10,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :video
   has_many :comment
-  
+
   validates :name, presence: true
   validates :age, numericality: { only_integer: true }
   
