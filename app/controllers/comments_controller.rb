@@ -23,6 +23,8 @@ class CommentsController < ApplicationController
   def create
     if user_signed_in? 
       @comment = Comment.new(comment_params)
+      @comment.user_id = current_user.id
+      @comment.time = Time.now
       respond_to do |format|
         if @comment.save
           format.html { redirect_to controller: 'videos', action: 'show', id: @comment.video_id, status: :found}
@@ -65,6 +67,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:video_id, :user_id, :comment)
+      params.require(:comment).permit(:video_id, :user_id, :comment, :time)
     end
 end
