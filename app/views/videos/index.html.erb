@@ -63,11 +63,13 @@
 				</a>
         <br>
         <p> category: <%= Category.find(video.category_id.to_i).category %></p>
-        <td> duration: <%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td> 
+        <p> duration: <%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></p> 
         <p> description: <%= video.description %></p>
         <p> <%= video.impressionist_count %> views</p> 
-       
-			</div>	
+
+        <p><%= video.likes.count %> <%= (video.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+			
+      </div>	
 
 		<% end %>
 

@@ -62,7 +62,7 @@ class VideosController < ApplicationController
       @video.likes = @video.likes + 1
       @video.save
       redirect_to controller: 'videos', action: 'show', id: params[:id], status: :found
-
+      
     end
 
   end

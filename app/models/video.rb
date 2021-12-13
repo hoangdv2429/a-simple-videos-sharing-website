@@ -6,6 +6,8 @@ class Video < ApplicationRecord
     has_many_attached :comment 
     belongs_to :category
 
+    has_many :likes, dependent: :destroy
+
     validates :title, presence: true
     validates :description, presence: true
     validate :correct_image_type

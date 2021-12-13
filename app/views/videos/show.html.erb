@@ -33,13 +33,25 @@
   <strong>Description:</strong>
   <%= @video.description %>
 </p>
+
 <p class="p-show"> <strong>View counts:</strong> <%= @video.impressionist_count %> views</p>
-<p class="p-show"> <%= @video.likes %> likes</p> 
+
+
+<p><%= @video.likes.count %> <%= (@video.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+
 <div class="back-end">
   <%= link_to 'Edit', edit_video_path(@video) %> |
   <%= link_to 'Back', videos_path %>
 </div>
 <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+
+
+<% pre_like = @video.likes.find { |like| like.user_id == current_user.id} %>
+<% if pre_like %>
+  <a> You liked the video!</a>
+<% else %>
+  <%= button_to 'Like', video_likes_path(@video), method: :post %>
+<% end %>
 
 <a href="/videos/<%= @video.id %>/like" class="p-show a-show text-info">
       LIKE
