@@ -11,4 +11,7 @@ class User < ApplicationRecord
   has_many :video
   has_many :comment
   
+  validates :name, presence: true
+  validates :age, numericality: { only_integer: true }
+  
 end
