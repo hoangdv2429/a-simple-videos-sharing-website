@@ -5,12 +5,12 @@
   <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
   <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
 
-<p>
+<h1>
   <strong>Title:</strong>
   <%= @video.title %>
-</p>
+</h1>
 
-<p>
+<p class="p-show">
   <strong>Category:</strong>
   <%= @video.category.category %>
 </p>
@@ -29,24 +29,23 @@
     
 </video>
 
-<p>
+<p class="p-show">
   <strong>Description:</strong>
   <%= @video.description %>
 </p>
-<p> <strong>View counts:</strong> <%= @video.impressionist_count %> views</p>
-<p> <%= @video.likes %> likes</p> 
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+<p class="p-show"> <strong>View counts:</strong> <%= @video.impressionist_count %> views</p>
+<p class="p-show"> <%= @video.likes %> likes</p> 
+<div class="back-end">
+  <%= link_to 'Edit', edit_video_path(@video) %> |
+  <%= link_to 'Back', videos_path %>
+</div>
 <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
 
-<a href="/videos/<%= @video.id %>/like">
-      <br>
+<a href="/videos/<%= @video.id %>/like" class="p-show a-show text-info">
       LIKE
-      <br>
 </a>
 
-<a href="/videos/<%= @video.id %>/dislike">
+<a href="/videos/<%= @video.id %>/dislike" class="p-show a-show text-danger">
       DISLIKE
 </a>
 
@@ -70,12 +69,12 @@
 
   <% if  user_signed_in? %>
     <div class="field">
-      <%= form.label :comment %>
-      <%= form.text_field :comment %>
+      <%= form.label :comment, class: "p-show" %>
+      <%= form.text_field :comment, class: "form-control" %>
     </div>
 
-    <div class="actions">
-      <%= form.submit %>
+    <div class="actions" >
+      <%= form.submit  %>
     </div>
   <% end %>
 <% end %>

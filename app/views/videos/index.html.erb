@@ -6,17 +6,19 @@
     <%= link_to category.category, videos_path(:cate => category.id) %>
   <% end %>
 </div>
-
+<div class "search-flex">
 <%= form_tag videos_path, :method => 'get' do %>
-  <%= text_field_tag :category, params[:category], :placeholder => 'Search by category', class: 'form-control' %>
-  <%= submit_tag 'Search by category', class: 'button-control btn btn-outline-dark ' %>
+  <%= text_field_tag :category, params[:category], :placeholder => 'Search by category' %>
+  <%= submit_tag 'Search by category', class: 'button-control btn btn-outline-dark' %>
 <% end %>
-
+</div>
+<br>
+<div class "search-flex">
 <%= form_tag videos_path, :method => 'get' do %>
-  <%= text_field_tag :title, params[:title], :placeholder => 'Search by title', class: 'form-control' %>
+  <%= text_field_tag :title, params[:title], :placeholder => 'Search by title' %>
   <%= submit_tag 'Search by title', class: 'button-control btn btn-outline-info' %>
 <% end %>
-
+</div>
 
 <h1>Videos</h1>
 
@@ -46,7 +48,6 @@
   <h1> there are no videos belongs to this category :< !!　申し訳ございません</h1>
 
 <% else %>	
-
 	<div class="row" id="video-contain">
 
 		<% @videos.each do |video| %>
