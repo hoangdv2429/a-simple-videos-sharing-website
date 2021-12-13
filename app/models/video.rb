@@ -2,8 +2,8 @@ class Video < ApplicationRecord
     is_impressionable #for view count
     has_one_attached :clip
     has_one_attached :thumbnail
-    # belongs_to :user 
-    # has_many_attached :comment 
+    belongs_to :user 
+    has_many_attached :comment 
     belongs_to :category
 
     validates :title, presence: true

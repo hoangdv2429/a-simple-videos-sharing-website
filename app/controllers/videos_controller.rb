@@ -1,7 +1,10 @@
 class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [:index, :show]
   impressionist :actions=>[:show,:index]
+
+  #check sigin
+
   # GET view count
   def show
     @videos = Video.find
@@ -10,6 +13,13 @@ class VideosController < ApplicationController
 
   # GET /videos or /videos.json
   def index
+    @videos = Video.all
+  end
+  
+  #myvideo
+  def myVideo 
+    # @video = current_user.Videos.all
+    @videos = Video.all
     @categories = Category.all
 
     if params[:category].present?
@@ -33,6 +43,7 @@ class VideosController < ApplicationController
       @videos = Video.all
     end
   end
+  
 
   # GET /videos/1 or /videos/1.json
   def show
@@ -76,7 +87,13 @@ class VideosController < ApplicationController
 
   # POST /videos or /videos.json
   def create
+    # @user = User.find_by(id: current_user.id)
+    
     @video = Video.new(video_params)
+    # @video = @user.videos.build(video_params)
+    # @video.id = current_user.id
+    # @video = Video.new(params[:video])
+    @video.user_id = current_user.id
 
     respond_to do |format|
       if @video.save
@@ -116,9 +133,9 @@ class VideosController < ApplicationController
     def set_video
       @video = Video.find(params[:id])
     end
-
+    
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:title, :category_id, :description, :clip, :thumbnail)
+      params.require(:video).permit(:title, :category_id, :description, :clip, :thumbnail,:user_id)
     end
 end

@@ -3,7 +3,7 @@ class CreateVideos < ActiveRecord::Migration[6.1]
     create_table :videos do |t|
       t.string :title
       t.text :description
-
+      
       t.timestamps
     end
   end
