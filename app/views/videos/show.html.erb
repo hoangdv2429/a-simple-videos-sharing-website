@@ -80,6 +80,7 @@
 <% end %>
 
 <% @comments.each do |comment| %>
+  <% if comment.video_id == @video.id%>
   <div>
     <div>
       <br>
@@ -95,4 +96,5 @@
       <%= comment.time %> 
     </div> 
   </div>
+  <% end %>
 <% end %>

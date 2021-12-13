@@ -2,6 +2,7 @@ class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
   impressionist :actions=>[:show,:index]
+  # , unique: [:session_hash]
 
   #check sigin
 
@@ -9,6 +10,7 @@ class VideosController < ApplicationController
   def show
     @videos = Video.find
     impressionist(@videos)
+    # impressionist(@videos, "unique view", :unique => [:session_hash])
  end
 
   # GET /videos or /videos.json

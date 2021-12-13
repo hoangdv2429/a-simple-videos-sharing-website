@@ -38,11 +38,25 @@
               </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                  <% if user_signed_in? %>
-                  <p>こんにちわ, <%= link_to current_user.name  , edit_user_registration_path %> </p>
+
+                  <a>こんにちは,</a>
+                  <li class="nav-item" style="border-right:1px solid black;" >
+                  
+                  <%= link_to current_user.name  , edit_user_registration_path %>
+                  </li>
+
+                  <li class="nav-item" style="border-right:1px solid black;" >
+                    <a class="nav-link" href="<%= new_category_path %>" > カテゴリを追加　</a>
+                  </li>
+                  
+                  <li class="nav-item" style="border-right:1px solid black;" >
+                  <a class="nav-link" >
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                  </a>
+                  </li>
             <% else %>
                 <li class="nav-item" style="border-right:1px solid black;">
-                    <a class="nav-link" href="<%= new_user_session_path %>">ログイン</a>
+                    <a class="nav-link" href="<%= new_user_session_path %>" >ログイン</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<%=new_user_registration_path %>" >ユーザ登録</a>
