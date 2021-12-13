@@ -37,7 +37,7 @@
 <p class="p-show"> <strong>View counts:</strong> <%= @video.impressionist_count %> views</p>
 
 
-<p><%= @video.likes.count %> <%= (@video.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+<p　class="p-show">　<strong><%= @video.likes.count %> <%= (@video.likes.count) == 1 ? 'Like' : 'Likes'%></strong></p>
 
 <div class="back-end">
   <%= link_to 'Edit', edit_video_path(@video) %> |
@@ -53,13 +53,6 @@
   <%= button_to 'Like', video_likes_path(@video), method: :post %>
 <% end %>
 
-<a href="/videos/<%= @video.id %>/like" class="p-show a-show text-info">
-      LIKE
-</a>
-
-<a href="/videos/<%= @video.id %>/dislike" class="p-show a-show text-danger">
-      DISLIKE
-</a>
 
 <%= form_with(model: @comment) do |form| %>
   <% if @comment.errors.any? %>
