@@ -82,7 +82,18 @@
 
 <% @comments.each do |comment| %>
   <div>
-    <div><%= comment.user_id %></div>
-    <div><%= comment.comment %></div>
+    <div>
+      <br>
+      User: 
+      <%= User.find(comment.user_id).name %>
+    </div>
+    <div>
+      Comment: 
+      <%= comment.comment %>
+    </div>
+    <div>
+      Time: 
+      <%= comment.time %> 
+    </div> 
   </div>
 <% end %>
