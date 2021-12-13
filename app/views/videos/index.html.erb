@@ -1,25 +1,26 @@
+
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'All', videos_path(:cate => 'all') %>
-<% @categories.each do |category| %>
-  <%= link_to category.category, videos_path(:cate => category.id) %>
-<% end %>
-
-
-<%= form_tag videos_path, :method => 'get' do %>
-  <%= text_field_tag :category, params[:category], :placeholder => 'Search by category' %>
-  <%= submit_tag 'Search by category' %>
-<% end %>
+<div id= "cate-btn">
+  <%= link_to 'All', videos_path(:cate => 'all')  %>
+  <% @categories.each do |category| %>
+    <%= link_to category.category, videos_path(:cate => category.id) %>
+  <% end %>
+</div>
 
 <%= form_tag videos_path, :method => 'get' do %>
-  <%= text_field_tag :title, params[:title], :placeholder => 'Search by title' %>
-  <%= submit_tag 'Search by title' %>
+  <%= text_field_tag :category, params[:category], :placeholder => 'Search by category', class: 'form-control' %>
+  <%= submit_tag 'Search by category', class: 'button-control btn btn-outline-dark ' %>
+<% end %>
+
+<%= form_tag videos_path, :method => 'get' do %>
+  <%= text_field_tag :title, params[:title], :placeholder => 'Search by title', class: 'form-control' %>
+  <%= submit_tag 'Search by title', class: 'button-control btn btn-outline-info' %>
 <% end %>
 
 
 <h1>Videos</h1>
 
-<table>
+<table id="debug">
   <thead>
     <tr>
       <th>Title</th>
@@ -46,11 +47,11 @@
 
 <% else %>	
 
-	<div class="row">
+	<div class="row" id="video-contain">
 
 		<% @videos.each do |video| %>
 
-			<div class="col-md-1">
+			<div class="col-md-1 video">
 				<a href="/videos/<%= video.id %>">
 					<%= image_tag(video.thumbnail, size: "250", data: { title: video.title }) %>
           <br>
