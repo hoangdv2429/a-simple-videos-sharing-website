@@ -14,6 +14,7 @@ class VideosController < ApplicationController
   # GET /videos or /videos.json
   def index
     @videos = Video.all
+    @categories = Category.all
   end
   
   #myvideo
