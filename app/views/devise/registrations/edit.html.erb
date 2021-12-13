@@ -16,6 +16,11 @@
       <% f.label :age %><br />
       <%= f.number_field :age, class:"form-control", placeholder:"Age" %>
     </div> 
+    
+    <div class="field form-group">
+      <label for="formFile" class="form-label">Avatar</label>
+      <%= f.file_field :avatar,class:"form-control" %><br>
+    </div>
   
   
     <div class="field form-group">
@@ -53,8 +58,6 @@
   <% end %>
   </div>
 </div>
-
-
 
 
 
