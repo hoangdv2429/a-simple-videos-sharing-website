@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
  <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
 
@@ -81,7 +81,18 @@
 
 <% @comments.each do |comment| %>
   <div>
-    <div><%= comment.user_id %></div>
-    <div><%= comment.comment %></div>
+    <div>
+      <br>
+      User: 
+      <%= User.find(comment.user_id).name %>
+    </div>
+    <div>
+      Comment: 
+      <%= comment.comment %>
+    </div>
+    <div>
+      Time: 
+      <%= comment.time %> 
+    </div> 
   </div>
 <% end %>

@@ -37,8 +37,11 @@
         <td><%= video.title %></td>
         <td><%= video.description %></td>
         <td><%= link_to 'Show', video %></td>
+        <!--
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
         <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        -->
+
       </tr>
     <% end %>
   </tbody>
@@ -60,7 +63,7 @@
 				</a>
         <br>
         <p> category: <%= Category.find(video.category_id.to_i).category %></p>
-        <td> duration: <%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td>
+        <td> duration: <%= ActiveStorage::Analyzer::VideoAnalyzer.new(video.clip.blob).metadata[:duration]%></td> 
         <p> description: <%= video.description %></p>
         <p> <%= video.impressionist_count %> views</p> 
        
@@ -73,4 +76,4 @@
 
 <br>
  
-<%= link_to 'New Video', new_video_path %>
+<!--<%= link_to 'New Video', new_video_path %>
