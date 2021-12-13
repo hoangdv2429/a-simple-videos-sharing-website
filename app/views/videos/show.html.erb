@@ -84,7 +84,7 @@
     <div>
       <br>
       User: 
-      <%= User.find(comment.user_id).name %>
+      <%= User.find(comment.user_id.to_i).name %>
     </div>
     <div>
       Comment: 

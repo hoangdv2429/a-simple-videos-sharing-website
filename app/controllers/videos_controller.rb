@@ -13,14 +13,6 @@ class VideosController < ApplicationController
 
   # GET /videos or /videos.json
   def index
-    @videos = Video.all
-    @categories = Category.all
-  end
-  
-  #myvideo
-  def myVideo 
-    # @video = current_user.Videos.all
-    @videos = Video.all
     @categories = Category.all
 
     if params[:category].present?
@@ -43,6 +35,13 @@ class VideosController < ApplicationController
     if cate.nil? && params[:category].nil? && params[:title].nil?
       @videos = Video.all
     end
+  end
+  
+  #myvideo
+  def myVideo 
+    # @video = current_user.Videos.all
+    @videos = Video.all
+   
   end
   
 
