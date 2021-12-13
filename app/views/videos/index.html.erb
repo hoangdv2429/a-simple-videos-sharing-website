@@ -1,5 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'All', videos_path(:cate => 'all') %>
+<% @categories.each do |category| %>
+  <%= link_to category.category, videos_path(:cate => category.id) %>
+<% end %>
+
+
+<%= form_tag videos_path, :method => 'get' do %>
+  <%= text_field_tag :category, params[:category], :placeholder => 'Search by category' %>
+  <%= submit_tag 'Search by category' %>
+<% end %>
+
+<%= form_tag videos_path, :method => 'get' do %>
+  <%= text_field_tag :title, params[:title], :placeholder => 'Search by title' %>
+  <%= submit_tag 'Search by title' %>
+<% end %>
+
+
 <h1>Videos</h1>
 
 <table>

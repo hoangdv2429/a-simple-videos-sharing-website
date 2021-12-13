@@ -10,7 +10,28 @@ class VideosController < ApplicationController
 
   # GET /videos or /videos.json
   def index
-    @videos = Video.all
+    @categories = Category.all
+
+    if params[:category].present?
+      @videos = Video.where(["category_id IN (?)", Category.where(["category LIKE ?","%#{params[:category]}%"]).pluck(:id)])
+    end
+
+    if params[:title].present?
+      @videos = Video.where(["title LIKE ?","%#{params[:title]}%"])
+    end
+
+    cate = params[:cate]
+    if !cate.nil?
+      @videos = Video.where(:category_id => cate)
+    end
+    
+    if cate == 'all'
+      @videos = Video.all
+    end
+
+    if cate.nil? && params[:category].nil? && params[:title].nil?
+      @videos = Video.all
+    end
   end
 
   # GET /videos/1 or /videos/1.json
