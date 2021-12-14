@@ -5,12 +5,12 @@
   <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
   <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
 
-<p>
+<h1>
   <strong>Title:</strong>
   <%= @video.title %>
-</p>
+</h1>
 
-<p>
+<p class="p-show">
   <strong>Category:</strong>
   <%= @video.category.category %>
 </p>
@@ -29,24 +29,35 @@
     
 </video>
 
-<p>
+<p class="p-show">
   <strong>Description:</strong>
   <%= @video.description %>
 </p>
-<p> <strong>View counts:</strong> <%= @video.impressionist_count %> views</p>
-<p> <%= @video.likes %> likes</p> 
 
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+<p class="p-show"> <strong>View counts:</strong> <%= @video.impressionist_count %> views</p>
+
+
+<p><%= @video.likes.count %> <%= (@video.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+
+<div class="back-end">
+  <%= link_to 'Edit', edit_video_path(@video) %> |
+  <%= link_to 'Back', videos_path %>
+</div>
 <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
 
-<a href="/videos/<%= @video.id %>/like">
-      <br>
+
+<% pre_like = @video.likes.find { |like| like.user_id == current_user.id} %>
+<% if pre_like %>
+  <a> You liked the video!</a>
+<% else %>
+  <%= button_to 'Like', video_likes_path(@video), method: :post %>
+<% end %>
+
+<a href="/videos/<%= @video.id %>/like" class="p-show a-show text-info">
       LIKE
-      <br>
 </a>
 
-<a href="/videos/<%= @video.id %>/dislike">
+<a href="/videos/<%= @video.id %>/dislike" class="p-show a-show text-danger">
       DISLIKE
       <br>
 </a>
@@ -71,22 +82,23 @@
 
   <% if  user_signed_in? %>
     <div class="field">
-      <%= form.label :comment %>
-      <%= form.text_field :comment %>
+      <%= form.label :comment, class: "p-show" %>
+      <%= form.text_field :comment, class: "form-control" %>
     </div>
 
-    <div class="actions">
-      <%= form.submit %>
+    <div class="actions" >
+      <%= form.submit  %>
     </div>
   <% end %>
 <% end %>
 
 <% @comments.each do |comment| %>
+  <% if comment.video_id == @video.id%>
   <div>
     <div>
       <br>
       User: 
-      <%= User.find(comment.user_id).name %>
+      <%= User.find(comment.user_id.to_i).name %>
     </div>
     <div>
       Comment: 
@@ -97,4 +109,5 @@
       <%= comment.time %> 
     </div> 
   </div>
+  <% end %>
 <% end %>

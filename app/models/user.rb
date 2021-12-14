@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :comment
   has_one_attached :avatar
 
+  has_many :likes, dependent: :destroy
+
   validates :name, presence: true
   validates :age, numericality: { only_integer: true }
   

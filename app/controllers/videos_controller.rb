@@ -2,6 +2,7 @@ class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
   impressionist :actions=>[:show,:index]
+  # , unique: [:session_hash]
 
   #check sigin
 
@@ -9,18 +10,11 @@ class VideosController < ApplicationController
   def show
     @videos = Video.find
     impressionist(@videos)
+    # impressionist(@videos, "unique view", :unique => [:session_hash])
  end
 
   # GET /videos or /videos.json
   def index
-    @videos = Video.all
-    @categories = Category.all
-  end
-  
-  #myvideo
-  def myVideo 
-    # @video = current_user.Videos.all
-    @videos = Video.all
     @categories = Category.all
 
     if params[:category].present?
@@ -45,6 +39,13 @@ class VideosController < ApplicationController
     end
   end
   
+  #myvideo
+  def myVideo 
+    # @video = current_user.Videos.all
+    @videos = Video.all
+   
+  end
+  
 
   # GET /videos/1 or /videos/1.json
   def show
@@ -61,7 +62,7 @@ class VideosController < ApplicationController
       @video.likes = @video.likes + 1
       @video.save
       redirect_to controller: 'videos', action: 'show', id: params[:id], status: :found
-
+      
     end
 
   end
