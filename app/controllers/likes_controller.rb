@@ -30,11 +30,9 @@ class LikesController < ApplicationController
          @video = Video.find(params[:video_id])
     end
 
-    
 
     def already_liked?
-        Like.where(user_id: current_user.id, video_id:
-        params[:video_id]).exists?
+        Like.where(user_id: current_user.id, video_id: params[:video_id]).exists?
     end
 
 end

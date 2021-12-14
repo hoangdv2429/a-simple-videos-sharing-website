@@ -49,6 +49,7 @@
 <% pre_like = @video.likes.find { |like| like.user_id == current_user.id} %>
 <% if pre_like %>
   <a> You liked the video!</a>
+  <%= button_to 'Unlike', video_like_path(@video, pre_like), method: :delete %>
 <% else %>
   <%= button_to 'Like', video_likes_path(@video), method: :post %>
 <% end %>
